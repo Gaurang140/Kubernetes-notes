@@ -2,10 +2,9 @@
 
 This document provides a list of essential `kubectl` commands for managing Kubernetes clusters. The `kubectl` command-line tool is used to interact with Kubernetes clusters.
 
----
 
-For more information about Minikube installation and usage, refer to the [Minikube Installation Guide](minikube.md).
-```
+- **For more information about Minikube installation and usage, refer to the [Minikube Installation Guide](minikube.md).**
+
 
 
 
