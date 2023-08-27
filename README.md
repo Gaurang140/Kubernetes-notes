@@ -2,11 +2,7 @@
 
 This document provides a list of essential `kubectl` commands for managing Kubernetes clusters. The `kubectl` command-line tool is used to interact with Kubernetes clusters.
 
-
 - **For more information about Minikube installation and usage, refer to the [Minikube Installation Guide](minikube.md).**
-
-
-
 
 ## Basic Information and Status
 
@@ -47,6 +43,24 @@ This document provides a list of essential `kubectl` commands for managing Kuber
   kubectl create deployment <deployment-name> --image=<image-name>
   ```
   Create a deployment with a specified image.
+
+- **Apply a Configuration File:**
+  ```bash
+  kubectl apply -f <file-name>.yaml
+  ```
+  Apply the configuration defined in a YAML file to the cluster.
+
+- **Get replicaset:**
+  ```bash
+  kubectl get replicaset
+  ```
+  Retrieve a list of ReplicaSets in the current namespace.
+
+- **Edit deployment configuration:**
+  ```bash
+  kubectl edit deployment <deployment-name>
+  ```
+  Open the deployment's configuration in a text editor for editing.
 
 - **Scale a Deployment:**
   ```bash
@@ -96,10 +110,14 @@ This document provides a list of essential `kubectl` commands for managing Kuber
   ```
   Delete all resources in a specific namespace.
 
----
 
+## Filter `kubectl get all` Output using `grep`
 
+To filter the output of the `kubectl get all` command and search for specific resources, you can use the `grep` command as follows:
 
+```bash
+kubectl get all | grep <search_term>
+```
 
-
+Replace `<search_term>` with the term you want to search for.
 

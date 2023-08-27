@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment   # what i want to creeate 
+metadata:       # data about the object
+  name: nginx-deployment   # name of the object or deployment
+  labels:       # labels are used to select and identify objects
+    app: nginx   # label name
+spec:       # specification of the deployment
+  replicas: 2     # number of pods 
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:  # Add a colon here
+      labels:
+        app: nginx
+    spec:      # spectification of the pod
+      containers:
+      - name: nginx     # name of the container 
+        image: nginx:1.16  # image name and version
+        ports:    # port number
+        - containerPort: 80
